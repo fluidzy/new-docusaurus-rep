@@ -7,8 +7,12 @@ on:
   pull_request:
     branches:
       - main
-  # Manual trigger to run the workflow
-  workflow_dispatch:
+  workflow_dispatch:   # allow manual trigger
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
